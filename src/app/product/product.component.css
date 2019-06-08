@@ -1,0 +1,19 @@
+table{
+    border: 5px solid black;
+
+}
+
+.add{
+    border: 2px solid black;
+
+}
+.logout{
+    float: right;
+}
+
+th{
+    padding: 30px;
+}
+td{
+    padding: 10px;
+}

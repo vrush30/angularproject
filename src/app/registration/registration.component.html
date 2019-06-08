@@ -1,0 +1,57 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<body style="background-color: rgb(184, 171, 175); height: 1000px; ">
+
+<div class="container">
+    <div class="row">
+    <div class="col-sm-6" >
+        <br><br>
+<form [formGroup]="userform" (ngSubmit)="save()" border="1">
+        <h2>Registration Form</h2>
+    <!-- <label>User Name :</label>
+    <input type="text" class="form-control" name="username" formControlName="username"><br>
+    <small *ngIf="userform.get('username').touched && 
+                    userform.get('username').hasError('required')" 
+                    class="alert alert-danger">User name must be enter</small>-->
+    <label>Full Name :</label> 
+    <input type="text" class="form-control" name="name" formControlName="name"><br>
+    <small *ngIf="userform.get('name').touched && 
+                    userform.get('name').hasError('required')" 
+                    class="alert alert-danger">name must be enter</small>
+    <label>Password :</label>
+    <input type="text" class="form-control" name="pass" formControlName="pass"><br>
+    <small *ngIf="userform.get('pass').touched && 
+                  userform.get('pass').hasError('required')" 
+                  class="alert alert-danger">Password must be enter</small>
+    <!-- <small *ngIf="userform.get('pass').hasError('pattern')">Password must contain </small> -->
+    <label>Mobile :</label>
+    <input type="text" class="form-control" name="mobile" formControlName="mobile"><br>
+    <small *ngIf="userform.get('mobile').touched && 
+                  userform.get('mobile').hasError('required')" 
+                  class="alert alert-danger">Enter mobile number</small>
+    <small *ngIf="userform.get('mobile').hasError('minlength') && 
+                  userform.get('mobile').hasError('maxlength')" 
+                  class="alert alert-danger">Enter valid Mobile number</small>
+    <label>Address1:</label>
+    <input type="text" class="form-control" name="address1" formControlName="address1"><br>
+    <small *ngIf="userform.get('address1').touched && 
+                  userform.get('address1').hasError('required')" 
+                  class="alert alert-danger">Enter your address</small> 
+    <label>Address2:</label>
+    <input type="text" class="form-control" name="address2" formControlName="address2"><br>
+    <label>Pincode:</label>
+    <input type="text" class="form-control" name="pincode" formControlName="pincode"><br>
+    <small *ngIf="userform.get('pincode').touched && 
+                  userform.get('pincode').hasError('required')" 
+                  class="alert alert-danger">Pincode is must</small>
+    <label>Email:</label>
+    <input type="text" class="form-control" name="email" formControlName="email"><br>
+    <small *ngIf="userform.get('email').touched && 
+                  userform.get('email').hasError('required')" 
+                  class="alert alert-danger">Enter your address</small>
+    <small *ngIf="userform.get('email').hasError('pattern')">Enter the valid email address </small>
+    <input type="submit" value="submit">
+</form>
+</div>
+</div></div>
+</body>

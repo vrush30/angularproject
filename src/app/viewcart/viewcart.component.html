@@ -1,0 +1,27 @@
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<body style="background-color: rgb(184, 171, 175); height: 1000px; ">
+<div class="container">
+  <br> <br> <br>
+  <h3>Cart</h3>
+<table border="1">
+  <tr>
+  <th>Product name</th>
+  <th>Product price</th>
+  <th>Quntity</th>
+  <th>delete</th>
+</tr>
+<tr *ngFor="let p of plist,let i=index">
+<td>{{p.pname}}</td>
+<td>{{p.pprice}}</td>
+<td>{{p.qunty}}</td>
+<td><button (click)="delete(i)">delete</button></td>
+</tr>
+</table>
+<br><br>
+<button (click)="final()">Generate Bill</button> <label> bill amount : {{sum}}</label>
+
+<br> <br> <button (click)="proceed()">Proceed to Checkout</button>
+</div>
+</body>

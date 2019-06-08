@@ -1,0 +1,40 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    padding-top: 50px;
+    text-align: center;
+    color: rgb(218, 16, 83);
+}
+.slider{
+    width: 1500px;
+    height: 450px;
+    /* background: url(/assets/1.jpg); */
+    margin: 100px auto;
+    animation: slide 10s infinite;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+@keyframes slide {
+    15%{
+        background: url(/assets/images/5.jpg);
+    }
+    30%{
+        background: url(/assets/images/16.jpg);
+    }
+    45%{
+        background: url(/assets/images/19.jpg);
+    }
+    60%{
+        background: url(/assets/images/18.jpg);
+    }
+    75%{
+        background: url(/assets/images/4.jpg);
+    }
+    100%{
+        background: url(/assets/images/6.jpg);
+    }
+}

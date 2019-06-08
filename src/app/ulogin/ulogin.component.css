@@ -1,0 +1,26 @@
+body {
+    background: rgb(184, 171, 175);
+    padding: 10px;
+    font-family: 'Varela Round';
+    background-image: no-repeat;
+    background-image: cover;
+    height: 1000px;
+
+  }
+  .row{
+    margin-left: 350px;
+  }
+  form{
+    /* display: flexbox; */
+    /* float: right; */
+      border: 2px solid black;
+      /* outline: rgb(177, 180, 177) solid 10px; */
+      /* margin: auto;  */
+      margin-top: 100px; 
+      padding: 20px;
+      text-align: center;
+    
+  }
+  button{
+  background-color: rgb(179, 184, 182);
+  }

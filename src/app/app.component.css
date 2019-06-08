@@ -1,0 +1,28 @@
+
+li {
+  font-size: 25px;
+}
+.navbar-nav{
+float: right;
+margin-left: 150px;
+}
+
+.nav-item{
+  padding-right: 30px;
+
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  #imgi{
+    margin-left: 50px;
+    width: 100px;
+    height: 100px;
+  }

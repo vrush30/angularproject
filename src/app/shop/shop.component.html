@@ -1,0 +1,29 @@
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<body style="background-color: rgb(184, 171, 175); height: 1000px; ">
+<br>
+<div class="container">
+<div class="row" class="col-sm-3">
+<select>
+  <option value="---Categories---">----Categories---</option>
+  <option value="Food Products">Food Products</option>
+  <option value="Cosmetics Products">Cosmetics Products</option>
+  <option value="Beuty Products">Beuty Products</option>
+</select> 
+</div>
+<br><br>   
+<div class="container" >
+  <div class="row" >
+      <div class="col-sm-3" *ngFor="let p of plist,let i=index">
+          
+              <div><img [src]=p.image width="70" height="70"></div>
+              <div>Product Name:{{p.pname}}</div>
+              <div>Product Price:{{p.pprice}}</div>
+              <div><input type="number" [(ngModel)]='qty'>Quantity</div>
+             <p> <button (click)="addtocart(i)">Add to cart</button></p>
+             
+  </div>
+</div>
+</div>
+</div>
+</body> 

@@ -1,0 +1,66 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <body style="background-color: rgb(184, 171, 175); height: 1000px; ">
+    <br><br>
+    <div class="container">
+        <button class="logout" (click)="xyz()">Log Out</button>
+
+      <div class="row">
+      <div class="col-sm-4">
+      <div class="add">
+      <h3>Add Product</h3><br> 
+    product name: <input type="text" [(ngModel)]="prname" name='prname'> <br> <br>
+    product price:<input type="text" [(ngModel)]="prprice" name="prprice"> <br> <br>
+    image:<input type="text" [(ngModel)]="image" name="image"> <br>
+    <button (click)="save()">save</button>
+    <br><br>
+  </div>
+</div>
+
+  
+  <div class="col-sm-4">
+    <div class="row">
+      <div class="add">
+      <h3>Update Product</h3><br> 
+    product name: <input type="text" value="pname"  [(ngModel)]="oobj.pname"> <br> <br>
+    product price:<input type="text" value="pprice" [(ngModel)]="oobj.pprice" > <br> <br>
+    image:<input type="text" [(ngModel)]="oobj.image" > <br> <br>
+
+    <button (click)="modify(i)">modify</button>
+</div>
+</div>
+
+</div>
+</div>
+  <br> <br>
+    <table border="2px solid black">
+        <tr>
+          <th>Image</th>
+          <th>product name</th>
+          <th>product price</th>
+          <th>Remove</th>
+          <th>Change</th>
+        </tr>
+        <tr *ngFor="let p of plist ,let i = index">
+          <td><img [src]="p.image" width="70" height="70"></td>
+          <td>{{p.pname}}</td>
+          <td>{{p.pprice}}</td>
+          <td><button class="btn btn-danger" (click)="delete(i)">Delete</button></td>
+          <td><button class= "btn btn-success" (click)="update(i)">Update</button></td>
+        </tr>
+      </table>
+
+    
+    
+    
+
+    
+<!-- <script>
+  function myFunction() {
+    var x = document.getElementById("myFile");
+    x.disabled = true;
+  }
+  </script>
+  <input type="file" id="myFile"> -->
+  </div>
+</body>

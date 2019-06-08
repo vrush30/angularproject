@@ -1,0 +1,40 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<body style="background-color: rgb(184, 171, 175); height: 1000px;">
+    <div class="container">
+      <br><br><br><br><br><br><br><br>
+      <div class="row">
+        <div class="col-sm-6">
+            <h4 style="text-align: center">Booking Form</h4> <br>
+
+    <form #bookingform="ngForm" (ngSubmit)="save(bookingform.value)">
+      <br>
+            <div class="form-group">
+              <label for="Name">Name:</label>
+              <input type="name"  #nm="ngModel"  id="name" required name="name" ngModel>
+              <br><small class="alert alert-warning" *ngIf="nm.hasError('required') && nm.touched">name is require</small> 
+              <label for="pwd">Services:</label>
+              Nervous Nelly:<input type="checkbox" #sr="ngModel" id="services" value="nervous" name="services" ngModel >
+              Happy Feet:<input type="checkbox" #sr="ngModel" id="services" value="happy feet" name="services" ngModel > 
+              Bug Off:<input type="checkbox" #sr="ngModel" id="services" value="bug off" name="services" ngModel > 
+              <!-- Grooming:<input type="checkbox" #sr="ngModel" id="services" name="services" ngModel >  -->
+              <br><small class="alert alert-warning" *ngIf="sr.hasError('minlength')">services are required</small>
+              <label for="Appoinment">Appoinment Timing:</label>
+                  <select #ap="ngModel" id="apt" name="apt" required ngModel>
+                   <option value="">---Select Timing---</option> 
+                  <option value="morning">Morning:9am to 11am</option> 
+                  <option value="noon">Noon:1pm to 3pm</option> 
+                  <option value="eve">Eve:5pm to 8pm</option>
+                </select>
+                <small class="alert alert-warning" *ngIf="ap.hasError('required') && ap.touched">Please select your timing</small>
+            </div>
+            
+            <button type="submit" [disabled]="bookingform.invalid">Submit</button>
+          </form>
+        </div>
+      </div>
+      {{bookingform.touched}}
+      {{bookingform|json}}
+    </div>
+    
+    </body>

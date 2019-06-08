@@ -1,0 +1,27 @@
+.container{
+    align-items: center;
+    float: right;
+}
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px;
+    background-color: rgb(179, 184, 182);
+    color: white;
+  }
+  h2{
+      text-align:center;
+  }
+  .row{
+      margin-left: 100px;
+  }
+  form{
+    border: 2px solid black;
+    padding: 20px;
+    /* text-align: center; */
+  }
+  button{
+    background-color: rgb(179, 184, 182);
+}
